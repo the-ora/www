@@ -1,11 +1,11 @@
-import Aura from "./components/aura";
+import { Hero } from "@/components/hero";
+import { Header } from "@/components/header";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center">
-      <main>
-        <Aura/>
-      </main>
-    </div>
+    <main className="h-screen w-screen">
+      <Header />
+      <Hero />
+    </main>
   );
 }
