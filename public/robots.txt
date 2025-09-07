@@ -1,0 +1,13 @@
+# Robots.txt for Ora Browser
+# https://orabrowser.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://orabrowser.com/sitemap.xml
+
+# Allow crawling of assets
+Allow: /icons/
+Allow: *.css
+Allow: *.js

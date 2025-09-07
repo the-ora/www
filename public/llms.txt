@@ -1,0 +1,89 @@
+# Ora Browser - LLM Information File
+
+## About Ora Browser
+Ora is a fast, secure, and beautiful browser built specifically for macOS. Designed with a clean, native experience that feels at home on macOS without unnecessary bloat.
+
+## Key Information
+- **Name**: Ora Browser
+- **Platform**: macOS (macOS 14.0 or later required)
+- **Technology**: Built on WebKit engine using SwiftUI/AppKit
+- **License**: MIT License (Open Source)
+- **Status**: Currently in early development (alpha version)
+- **Website**: https://orabrowser.com
+- **Repository**: https://github.com/the-ora/browser
+- **Twitter**: https://twitter.com/orabrowser
+
+## Core Features
+- Native macOS UI built with SwiftUI/AppKit
+- Fast, responsive browsing powered by WebKit
+- Privacy-first browsing with built-in content blocker for tracking prevention and ad blocking
+- Multiple search engine support
+- URL auto-completion and search suggestions
+- Quick Launcher for instant navigation and search
+- Developer mode
+- Tab management with containers (spaces), pinning and reordering
+- Vertical Sidebar
+- Session restore after app restart or crash
+- Keyboard shortcuts for navigation and tabs
+- Picture in Picture support
+- Developer Tools
+
+## Planned Features (Beta Version)
+- Download manager with pause/resume support
+- iCloud Keychain password autofill
+- Private browsing mode
+- Bookmark management with folders and search
+- Extensions support (App Store & Chrome extensions)
+- Split tabs (multiple tabs open side by side)
+- Reader mode with adjustable font and themes
+- Web notifications
+
+## Design Philosophy
+- Less noise, more browsing
+- Clean, native experience
+- Simple, powerful, and free of bloat
+- Privacy-first approach
+- Native macOS integration
+
+## Target Audience
+- macOS users seeking a native browser experience
+- Privacy-conscious users
+- Users wanting distraction-free browsing
+- People looking for alternatives to Arc, Zen, Dia, Chrome, Safari, or other browsers
+- Developers and power users
+- Users who prefer minimal, clean interfaces
+
+## Technical Details
+- Built with Swift 5.9
+- Requires Xcode 15 or later for development
+- Uses SwiftData for persistence
+- WebKit engine for rendering
+- Sparkle framework for automatic updates
+- Ed25519 cryptographic keys for secure updates
+
+## Social Links
+- Twitter/X: https://x.com/orabrowser (@orabrowser)
+- GitHub: https://github.com/the-ora/browser
+- Discord: https://discord.gg/TBM7z4ps
+- Support: https://buymeacoffee.com/orabrowser
+
+## Keywords for Search
+Ora Browser, macOS browser, WebKit browser, native macOS browser, SwiftUI browser, fast browser, secure browser, beautiful browser, minimal browser, clean browser, privacy-first browsing, distraction-free browsing, native experience, tab management, content blocker, Safari alternative, macOS native app, Arc alternative, Arc browser alternative, better than Arc, Arc replacement, Zen alternative, Zen browser alternative, better than Zen, Zen replacement, Dia alternative, Dia browser alternative, better than Dia, Dia replacement, Brave alternative, Chrome alternative, SigmaOS alternative, Firefox alternative, Edge alternative, Vivaldi alternative, Opera alternative, modern browser alternative, productivity browser alternative, aesthetic browser alternative
+
+## Mission Statement
+To deliver a clean, native macOS browsing experience that's simple, powerful, and free of bloat, focusing on privacy and user productivity.
+
+## Development Status
+Ora is currently in early stages of development. Core functionalities are being implemented with an alpha version expected soon. The browser is not yet ready for day-to-day use but is actively being developed as an open-source project.
+
+## Unique Selling Points
+1. Native macOS design and feel
+2. WebKit-based for performance and compatibility
+3. Privacy-first with built-in content blocking
+4. Clean, minimal interface without distractions
+5. Open source and free
+6. Built specifically for macOS (not cross-platform)
+7. Focus on productivity and aesthetics
+8. Developer-friendly with built-in dev tools
+
+This information is current as of the file creation date and may be updated as the project evolves.
