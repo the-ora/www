@@ -138,7 +138,7 @@ export default function RootLayout({
       >
         <Analytics/>
         <Databuddy
-          clientId={process.env.DATABUDDY_CLIENT_ID!}
+          clientId={process.env.NEXT_PUBLIC_DATABUDDY_CLIENT_ID!}
           enableBatching={true}
         />
         <ThemeProvider
