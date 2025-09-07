@@ -12,7 +12,7 @@ export default function Home() {
   const softwareSchema = createSoftwareApplicationSchema();
 
   return (
-    <main className="h-screen w-screen">
+    <main className="min-h-screen w-full overflow-x-hidden">
       <Script
         id="website-schema"
         type="application/ld+json"
