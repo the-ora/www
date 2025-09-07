@@ -22,10 +22,10 @@ interface HeaderProps {
 export function Header({ className }: HeaderProps) {
   return (
     <header>
-      <nav className="fixed z-20 mt-4 w-full">
+      <nav className="fixed z-20 mt-2 w-full px-4 sm:mt-4">
         <div
           className={cn(
-            "mx-auto flex w-3xl items-center justify-between gap-6 rounded-none border bg-background/10 px-4 py-4 backdrop-blur-md",
+            "mx-auto flex w-full max-w-3xl items-center justify-between gap-4 rounded-none border bg-background/10 px-3 py-3 backdrop-blur-md sm:gap-6 sm:px-4 sm:py-4",
             className,
           )}
         >
@@ -33,10 +33,10 @@ export function Header({ className }: HeaderProps) {
             <Link
               href="/"
               aria-label="home"
-              className="flex items-center space-x-2 opacity-80 duration-150 hover:opacity-100"
+              className="flex items-center space-x-1.5 opacity-80 duration-150 hover:opacity-100 sm:space-x-2"
             >
-              <Logo className="size-6" />
-              <p className="font-semibold text-xl">Ora</p>
+              <Logo className="size-5 sm:size-6" />
+              <p className="font-semibold text-lg sm:text-xl">Ora</p>
             </Link>
           </div>
 
@@ -56,11 +56,11 @@ export function Header({ className }: HeaderProps) {
             ))}
           </ul>*/}
 
-          <div className="flex items-center gap-12">
-            <div className={cn("flex items-center gap-6")}>
+          <div className="flex items-center gap-6 sm:gap-12">
+            <div className={cn("flex items-center gap-3 sm:gap-6")}>
               {SOCIALITEMS.map((item) => (
                 <a
-                  className="size-4 rounded-full duration-150 hover:opacity-80"
+                  className="size-3.5 rounded-full duration-150 hover:opacity-80 sm:size-4"
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"

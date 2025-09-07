@@ -44,5 +44,5 @@ export const SOCIALITEMS: SocialItem[] = [
     label: "Discord",
     href: PRESENTATION.urls.discord,
     icon: Icons.discord,
-  }
+  },
 ];

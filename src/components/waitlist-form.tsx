@@ -59,16 +59,18 @@ export function WaitlistForm() {
       try {
         const ip = await fetchUserIP();
         toast.promise(
-          addToWaitlist(trimmedEmail, ip).then(() => {
-            return sendJoiningEmail(trimmedEmail);
-          }).then(() => {
-            setFormState("success");
-          }),
+          addToWaitlist(trimmedEmail, ip)
+            .then(() => {
+              return sendJoiningEmail(trimmedEmail);
+            })
+            .then(() => {
+              setFormState("success");
+            }),
           {
             loading: "Wait a sec, adding you to waitlist...",
             success: "Boom, You're in!",
             error: "Failed to join waitlist",
-          }
+          },
         );
       } catch (error) {
         setFormState("idle");
@@ -95,9 +97,9 @@ export function WaitlistForm() {
   const isDisabled = isSubmitting || isSuccess;
 
   return (
-    <div className="flex space-x-4">
+    <div className="flex flex-col md:flex-row gap-4 md:justify-end">
       <Input
-        className="w-96 rounded-none dark:bg-background/40"
+        className="w-full md:w-96 rounded-none dark:bg-background/40"
         placeholder="yonaries@0.email"
         value={email}
         onChange={handleEmailChange}

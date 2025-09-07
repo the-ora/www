@@ -5,19 +5,19 @@ import { Button } from "./ui/button";
 
 export function Footer() {
   return (
-    <footer className="h-12 border-t">
-      <div className="mx-auto max-w-3xl space-y-12 py-8">
-        <div className="flex justify-between">
-          <div className="flex h-full w-80 flex-col justify-center gap-8">
+    <footer className="border-t">
+      <div className="mx-auto max-w-3xl space-y-8 py-8 px-4 sm:space-y-12">
+        <div className="flex flex-col gap-8 sm:flex-row sm:justify-between">
+          <div className="flex flex-col gap-6 sm:h-full sm:w-80 sm:justify-center sm:gap-8">
             <Logo className="size-8" />
             <p className="text-neutral-600 text-sm">
               {PRESENTATION.footer.description}
             </p>
 
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-4 sm:gap-6">
               {SOCIALITEMS.map((item) => (
                 <a
-                  className="size-4 rounded-full duration-150 hover:opacity-80"
+                  className="size-4 rounded-full duration-150 hover:opacity-80 sm:size-4"
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -29,12 +29,12 @@ export function Footer() {
               ))}
             </div>
           </div>
-          <div className="py-2 px-3 bg-primary h-fit border hover:bg-primary/96">
-            <BuyMeACoffeeBadge className="size-24" />
+          <div className="self-center py-2 px-3 bg-primary h-fit border hover:bg-primary/96 sm:self-start">
+            <BuyMeACoffeeBadge className="size-20 sm:size-24" />
           </div>
         </div>
         <div className="border-t">
-          <p className="py-4 text-neutral-600 text-sm">
+          <p className="py-4 text-center text-neutral-600 text-sm sm:text-left">
             Copyright © 2025 Ora. All rights reserved.
           </p>
         </div>

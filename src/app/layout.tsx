@@ -17,6 +17,20 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Ora Browser",
   description: "Less noise, more browsing.",
+  icons: [
+    {
+      rel: "icon",
+      type: "image/svg+xml",
+      url: "/favicon.svg",
+      media: "(prefers-color-scheme: light)",
+    },
+    {
+      rel: "icon",
+      type: "image/svg+xml",
+      url: "/favicon-dark.svg",
+      media: "(prefers-color-scheme: dark)",
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -40,7 +54,7 @@ export default function RootLayout({
           <Toaster
             position="bottom-center"
             toastOptions={{
-              style: { 
+              style: {
                 borderRadius: 0,
               },
             }}
