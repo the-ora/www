@@ -63,7 +63,7 @@ export function WaitlistForm() {
             if (result.isNewEmail) {
               toast.promise(sendJoiningEmail(trimmedEmail), {
                 loading: "Wait a sec, adding you to waitlist...",
-                success: "Boom, You're in!"
+                success: "Boom, You're in!",
               });
             } else {
               toast.success("You're already on the waitlist!");
@@ -116,7 +116,7 @@ export function WaitlistForm() {
       />
       <Button
         onClick={handleSubmit}
-        className="rounded-none w-full sm:w-30"
+        className="rounded-none w-full sm:w-30 transition-transform duration-150 will-change-transform hover:scale-[1.02] active:scale-95"
         disabled={isDisabled}
         type="submit"
       >

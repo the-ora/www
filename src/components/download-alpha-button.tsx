@@ -8,7 +8,7 @@ export async function DownloadAlphaButton() {
   const dmgUrl = await getLatestReleaseDmgUrl("the-ora", "browser");
   return (
     <Link href={dmgUrl} target="_blank">
-      <ShinyButton className="flex rounded-none transition-transform hover:bg-foreground/2 text-sm sm:text-base">
+      <ShinyButton className="flex rounded-none text-sm sm:text-base">
         <Icons.apple className="size-3 sm:size-4 fill-white" />
         <span className="font-medium">Download Alpha</span>
       </ShinyButton>
