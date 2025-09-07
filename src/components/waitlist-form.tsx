@@ -58,20 +58,26 @@ export function WaitlistForm() {
 
       try {
         const ip = await fetchUserIP();
-        toast.promise(
-          addToWaitlist(trimmedEmail, ip)
-            .then(() => {
-              return sendJoiningEmail(trimmedEmail);
-            })
-            .then(() => {
-              setFormState("success");
-            }),
-          {
-            loading: "Wait a sec, adding you to waitlist...",
-            success: "Boom, You're in!",
-            error: "Failed to join waitlist",
-          },
-        );
+        addToWaitlist(trimmedEmail, ip)
+          .then(async (result) => {
+            if (result.isNewEmail) {
+              toast.promise(sendJoiningEmail(trimmedEmail), {
+                loading: "Wait a sec, adding you to waitlist...",
+                success: "Boom, You're in!"
+              });
+            } else {
+              toast.success("You're already on the waitlist!");
+            }
+            setFormState("success");
+          })
+          .catch((error) => {
+            setFormState("idle");
+            if (error instanceof Error) {
+              toast.error(error.message);
+            } else {
+              toast.error("Failed to join waitlist");
+            }
+          });
       } catch (error) {
         setFormState("idle");
 

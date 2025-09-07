@@ -10,9 +10,10 @@ export async function addToWaitlist(email: string, ip: string) {
   const { success } = await ratelimit.limit(ip);
   if (!success) throw new Error("Too many requests, please try again later.");
 
-  await redis.sadd("ora:waitlist", email);
+  const added = await redis.sadd("ora:waitlist", email);
+  const isNewEmail = added === 1;
 
-  return { success: true };
+  return { success: true, isNewEmail };
 }
 
 export async function getWaitlistCount() {
