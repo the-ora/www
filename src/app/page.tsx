@@ -5,6 +5,7 @@ import {
   createWebsiteSchema,
   createSoftwareApplicationSchema,
 } from "@/lib/seo";
+import Script from "next/script";
 
 export default function Home() {
   const websiteSchema = createWebsiteSchema();
@@ -12,13 +13,17 @@ export default function Home() {
 
   return (
     <main className="h-screen w-screen">
-      <script
+      <Script
+        id="website-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        strategy="beforeInteractive"
       />
-      <script
+      <Script
+        id="software-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
+        strategy="beforeInteractive"
       />
       <Header />
       <Hero />
