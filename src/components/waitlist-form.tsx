@@ -1,20 +1,38 @@
 "use client";
+
 import { useState } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { toast } from "sonner";
+import { addToWaitlist, sendJoiningEmail } from "@/actions/waitlist";
 
 export function WaitlistForm() {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const [isJoined, setIsJoined] = useState(false);
 
-  async function handleJoinWaitlist() {
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
     setLoading(true);
+
     toast.promise(
-      new Promise((resolve) => setTimeout(resolve, 1000)).finally(() => {
-        setLoading(false);
-        setIsJoined(true);
+      new Promise(async (resolve, reject) => {
+        try {
+          const data = await addToWaitlist(email);
+          if (data.success) {
+            setIsJoined(true);
+            console.log(data);
+            sendJoiningEmail(email);
+            setEmail("");
+            resolve("Joined waitlist");
+          } else {
+            reject("Failed to join waitlist");
+          }
+        } catch (error) {
+          reject("Failed to join waitlist");
+        } finally {
+          setLoading(false);
+        }
       }),
       {
         loading: "Joining waitlist",
@@ -33,7 +51,7 @@ export function WaitlistForm() {
         onChange={(e) => setEmail(e.target.value)}
       />
       <Button
-        onClick={handleJoinWaitlist}
+        onClick={handleSubmit}
         className="rounded-none w-30"
         disabled={isJoined || loading}
       >
