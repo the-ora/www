@@ -110,7 +110,7 @@ export function WaitlistForm() {
       />
       <Button
         onClick={handleSubmit}
-        className="rounded-none w-30"
+        className="rounded-none w-full sm:w-30"
         disabled={isDisabled}
         type="submit"
       >
