@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import { Analytics } from "@vercel/analytics/next"
-import { Databuddy } from '@databuddy/sdk';
+import { Databuddy } from '@databuddy/sdk/react';
 import "./globals.css";
 
 const geistSans = Geist({
@@ -136,11 +136,6 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}
         suppressHydrationWarning
       >
-        <Analytics/>
-        <Databuddy
-          clientId={process.env.NEXT_PUBLIC_DATABUDDY_CLIENT_ID!}
-          enableBatching={true}
-        />
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -148,6 +143,11 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <Analytics/>
+          <Databuddy
+            clientId={process.env.NEXT_PUBLIC_DATABUDDY_CLIENT_ID!}
+            enableBatching={true}
+          />
           <Toaster
             position="bottom-center"
             toastOptions={{
