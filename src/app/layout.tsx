@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Ora Browser - Fast, Secure, and Minimal Browser for macOS",
   description:
-    "Built on WebKit, designed for macOS. Ora delivers a clean, native experience that's simple, powerful, and free of bloat.",
+    "Arc alternative built on WebKit. Ora delivers a clean, native experience that's simple, powerful, and free of bloat.",
   keywords: [
     "Ora Browser",
     "macOS browser",
