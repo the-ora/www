@@ -4,6 +4,7 @@
     "": {
       "name": "www",
       "dependencies": {
+        "@databuddy/sdk": "^2.0.0",
         "@radix-ui/react-slot": "^1.2.3",
         "@react-email/components": "^0.5.2",
         "@upstash/ratelimit": "^2.0.6",
@@ -56,6 +57,8 @@
     "@biomejs/cli-win32-arm64": ["@biomejs/cli-win32-arm64@2.2.0", "", { "os": "win32", "cpu": "arm64" }, "sha512-n9a1/f2CwIDmNMNkFs+JI0ZjFnMO0jdOyGNtihgUNFnlmd84yIYY2KMTBmMV58ZlVHjgmY5Y6E1hVTnSRieggA=="],
 
     "@biomejs/cli-win32-x64": ["@biomejs/cli-win32-x64@2.2.0", "", { "os": "win32", "cpu": "x64" }, "sha512-Nawu5nHjP/zPKTIryh2AavzTc/KEg4um/MxWdXW0A6P/RZOyIpa7+QSjeXwAwX/utJGaCoXRPWtF3m5U/bB3Ww=="],
+
+    "@databuddy/sdk": ["@databuddy/sdk@2.0.0", "", { "peerDependencies": { "react": ">=18", "vue": ">=3" }, "optionalPeers": ["react", "vue"] }, "sha512-jwNeLwg03jN3380W2eyhegjO/eqqVcVXekO01n/d9dzalnaCm6DCEG3lGd8PMBf8ztu/dv1QTivkd4W6rO+tNQ=="],
 
     "@emnapi/runtime": ["@emnapi/runtime@1.5.0", "", { "dependencies": { "tslib": "^2.4.0" } }, "sha512-97/BJ3iXHww3djw6hYIfErCZFee7qCtrneuLa20UXFCOTCfBM2cvQHjWJ2EG0s0MtdNwInarqCTz35i4wWXHsQ=="],
 
