@@ -22,8 +22,7 @@ export function WaitlistForm() {
           if (data.success) {
             setIsJoined(true);
             console.log(data);
-            sendJoiningEmail(email);
-            setEmail("");
+            await sendJoiningEmail(email);
             resolve("Joined waitlist");
           } else {
             reject("Failed to join waitlist");
@@ -49,6 +48,7 @@ export function WaitlistForm() {
         placeholder="yonaries@0.email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
+        disabled={isJoined || loading}
       />
       <Button
         onClick={handleSubmit}

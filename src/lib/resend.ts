@@ -3,5 +3,9 @@ import { Resend, CreateEmailOptions } from "resend";
 const resend = new Resend(process.env.RESEND);
 
 export async function sendEmail(options: CreateEmailOptions) {
-  await resend.emails.send(options);
+  try {
+    await resend.emails.send(options);
+  } catch (error) {
+    console.error("Error sending email:", error);
+  }
 }
