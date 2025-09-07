@@ -116,7 +116,7 @@ export function WaitlistForm() {
       />
       <Button
         onClick={handleSubmit}
-        className="rounded-none w-full sm:w-30"
+        className="rounded-none w-full sm:w-30 transition-transform duration-150 will-change-transform hover:scale-[1.02] active:scale-95"
         disabled={isDisabled}
         type="submit"
       >

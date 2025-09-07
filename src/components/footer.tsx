@@ -17,7 +17,7 @@ export function Footer() {
             <div className="flex items-center gap-4 sm:gap-6">
               {SOCIALITEMS.map((item) => (
                 <a
-                  className="size-4 rounded-full duration-150 hover:opacity-80 sm:size-4"
+                  className="size-4 rounded-full opacity-80 duration-150 hover:opacity-100 sm:size-4"
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -29,7 +29,7 @@ export function Footer() {
               ))}
             </div>
           </div>
-          <div className="self-center py-2 px-3 bg-primary h-fit border hover:bg-primary/96 sm:self-start">
+          <div className="self-center py-2 px-3 bg-primary h-fit border hover:bg-primary/96 sm:self-start transition-transform duration-150 will-change-transform hover:scale-[1.02] active:scale-95">
             <BuyMeACoffeeBadge className="size-20 sm:size-24" />
           </div>
         </div>
