@@ -8,6 +8,7 @@ import {
   Text,
   Heading,
   Head,
+  Link,
 } from "@react-email/components";
 
 export function WaitlistEmail({ email }: { email: string }) {
@@ -48,36 +49,49 @@ export function WaitlistEmail({ email }: { email: string }) {
           <div style={{ height: "40px" }} />
 
           <Text style={{ fontFamily: "monospace" }}>
-            To keep up to date, follow us on Twitter{" "}
+            To keep up to date, follow us on Twitter:
           </Text>
-          <div
+          <div style={{ height: "20px" }} />
+
+          <Link
             style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "12px",
+              textDecoration: "underline",
+              color: "#3b82f6",
               fontSize: "14px",
               fontFamily: "monospace",
             }}
+            href="https://x.com/orabrowser"
           >
-            <a
-              style={{ textDecoration: "underline", color: "#3b82f6" }}
-              href="https://x.com/orabrowser"
-            >
-              Ora Browser
-            </a>
-            <a
-              style={{ textDecoration: "underline", color: "#3b82f6" }}
-              href="https://x.com/yonathandejene"
-            >
-              Yonaries
-            </a>
-            <a
-              style={{ textDecoration: "underline", color: "#3b82f6" }}
-              href="https://x.com/keni_ax"
-            >
-              Keni
-            </a>
-          </div>
+            Ora Browser
+          </Link>
+
+          <div style={{ height: "12px" }} />
+
+          <Link
+            style={{
+              textDecoration: "underline",
+              color: "#3b82f6",
+              fontSize: "14px",
+              fontFamily: "monospace",
+            }}
+            href="https://x.com/yonathandejene"
+          >
+            Yonaries
+          </Link>
+
+          <div style={{ height: "12px" }} />
+
+          <Link
+            style={{
+              textDecoration: "underline",
+              color: "#3b82f6",
+              fontSize: "14px",
+              fontFamily: "monospace",
+            }}
+            href="https://x.com/keni_ax"
+          >
+            Keni
+          </Link>
         </Container>
       </Body>
     </Html>
