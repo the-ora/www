@@ -63,7 +63,7 @@ export function WaitlistForm() {
             if (result.isNewEmail) {
               toast.promise(sendJoiningEmail(trimmedEmail), {
                 loading: "Wait a sec, adding you to waitlist...",
-                success: "Boom, You're in!"
+                success: "Boom, You're in!",
               });
             } else {
               toast.success("You're already on the waitlist!");

@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Ora Browser Website
 
-## Getting Started
+Website for the Ora Browser, built with Next.js App Router, Tailwind v4, and Turbopack. Includes waitlist signup with email confirmation, SEO metadata/JSON‑LD, and analytics.
 
-First, run the development server:
+### Tech stack
+- Framework: Next.js 15 (App Router, React 19)
+- Styling: Tailwind CSS v4 (inline theme tokens)
+- Animations: motion/react
+- Email: Resend + react-email
+- Data: Upstash Redis (waitlist set + rate limiting)
+- Theme: next-themes (class strategy, default dark)
+- Analytics: @vercel/analytics
+
+## Quick start
 
 ```bash
+# install deps
+npm install
+
+# run dev server (Turbopack)
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# typecheck/lint/format
+npm run lint
+npm run format
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment variables
+Create a `.env.local` in the project root (do not commit). Required keys:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```env
+follow the env.example
+```
 
-## Learn More
+Notes:
+- Email sending only occurs when a user is newly added to the waitlist.
+- If any of the above are missing in development, features depending on them may fail.
 
-To learn more about Next.js, take a look at the following resources:
+## Scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run dev     # next dev --turbopack
+npm run build   # next build --turbopack
+npm run start   # next start
+npm run lint    # biome check
+npm run format  # biome format --write
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project structure
 
-## Deploy on Vercel
+```
+src/
+  app/                # App Router entrypoints
+    layout.tsx        # global layout, theme provider, analytics
+    page.tsx          # home page (Header, Hero, Footer)
+  components/         # UI + feature components
+    emails/           # react-email templates
+    ui/               # primitives (button, input, shiny-button, etc.)
+  actions/            # server actions (waitlist, github)
+  lib/                # integrations (redis, resend, seo helpers)
+  data/               # static content (presentation, social links)
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deployment (Vercel)
+1. Push to GitHub.
+2. Import the repo in Vercel.
+3. Add environment variables from the “Environment variables” section for each environment.
+4. Build and deploy. Ensure the domain used in `RESEND_FROM` is verified in Resend.
+
+## Contributing
+- Keep PRs small and focused.
+- Follow the existing patterns and avoid introducing duplicate logic.
+- Run `npm run lint` and `npm run format` before committing.
+
+## License
+Ora is open source and licensed under the MIT License.
+Feel free to use, modify, and distribute it under the terms of the MIT License.

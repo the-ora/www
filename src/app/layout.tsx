@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
-import { Analytics } from "@vercel/analytics/next"
-import { Databuddy } from '@databuddy/sdk/react';
+import { Analytics } from "@vercel/analytics/next";
+import { Databuddy } from "@databuddy/sdk/react";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -142,7 +142,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
-          <Analytics/>
+          <Analytics />
           <Databuddy
             clientId={process.env.NEXT_PUBLIC_DATABUDDY_CLIENT_ID!}
             trackWebVitals
