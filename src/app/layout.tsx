@@ -146,7 +146,9 @@ export default function RootLayout({
           <Analytics/>
           <Databuddy
             clientId={process.env.NEXT_PUBLIC_DATABUDDY_CLIENT_ID!}
-            enableBatching={true}
+            trackWebVitals
+            trackErrors
+            enableBatching
           />
           <Toaster
             position="bottom-center"
