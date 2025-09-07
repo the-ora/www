@@ -1,50 +1,15 @@
-import { Icons } from "@/components/icons";
+import { SOCIALITEMS } from "@/data/presentation";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import React from "react";
 import { Logo } from "./logo";
-
-export const URLS = {
-  GITHUB: "https://github.com/the-ora/browser",
-  TWITTER: "https://x.com/orabrowser",
-  DISCORD: "https://discord.gg/TBM7z4ps",
-  SITE: "https://orabrowser.com",
-} as const;
-
-interface SocialItem {
-  id: number;
-  label: string;
-  href: string;
-  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
-}
+import { Button } from "./ui/button";
 
 interface NavigationItem {
   name: string;
   href: string;
 }
 
-const socialItems: SocialItem[] = [
-  {
-    id: 1,
-    label: "GitHub",
-    href: URLS.GITHUB,
-    icon: Icons.github,
-  },
-  {
-    id: 2,
-    label: "Twitter",
-    href: URLS.TWITTER,
-    icon: Icons.x,
-  },
-  {
-    id: 3,
-    label: "Discord",
-    href: URLS.DISCORD,
-    icon: Icons.discord,
-  },
-];
-
-const navigationItems: NavigationItem[] = [
+const _navigationItems: NavigationItem[] = [
   { name: "Why", href: "#why" },
   { name: "Changelogs", href: "#changelogs" },
   { name: "Contributors", href: "#contributors" },
@@ -57,10 +22,10 @@ interface HeaderProps {
 export function Header({ className }: HeaderProps) {
   return (
     <header>
-      <nav className="fixed z-20 w-full mt-4 items-center flex justify-center">
+      <nav className="fixed z-20 mt-4 w-full">
         <div
           className={cn(
-            "bg-background/10 backdrop-blur-md border rounded-none w-3xl flex items-center justify-between gap-6 px-4 py-4",
+            "mx-auto flex w-3xl items-center justify-between gap-6 rounded-none border bg-background/10 px-4 py-4 backdrop-blur-md",
             className,
           )}
         >
@@ -71,26 +36,29 @@ export function Header({ className }: HeaderProps) {
               className="flex items-center space-x-2 opacity-80 duration-150 hover:opacity-100"
             >
               <Logo className="size-6" />
-              <p className="text-xl font-semibold">Ora</p>
+              <p className="font-semibold text-xl">Ora</p>
             </Link>
           </div>
 
           {/*<ul className="flex items-center gap-4 text-sm">
-            {navigationItems.map((item, index) => (
+            {_navigationItems.map((item, index) => (
               <li key={index}>
-                <Link
-                  href={item.href}
-                  className="block text-foreground/60 duration-150 hover:text-accent-foreground"
+                <Button
+                  variant="link"
+                  className="block text-foreground/60 duration-150 hover:text-accent-foreground p-0"
+                  disabled
                 >
-                  <span>{item.name}</span>
-                </Link>
+                  <Link href={item.href}>
+                    <span>{item.name}</span>
+                  </Link>
+                </Button>
               </li>
             ))}
           </ul>*/}
 
           <div className="flex items-center gap-12">
             <div className={cn("flex items-center gap-6")}>
-              {socialItems.map((item) => (
+              {SOCIALITEMS.map((item) => (
                 <a
                   className="size-4 rounded-full duration-150 hover:opacity-80"
                   href={item.href}

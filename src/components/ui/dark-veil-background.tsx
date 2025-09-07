@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useRef, useEffect, forwardRef } from "react";
-// @ts-ignore
 import { Renderer, Program, Mesh, Triangle, Vec2 } from "ogl";
+import type React from "react";
+import { forwardRef, useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
 
 const vertex = `
@@ -184,10 +184,10 @@ export const DarkVeilBackground = forwardRef<
     return (
       <div
         ref={ref}
-        className={cn("w-full h-full relative", className)}
+        className={cn("relative h-full w-full", className)}
         {...domProps}
       >
-        <canvas ref={canvasRef} className="w-full h-full block" />
+        <canvas ref={canvasRef} className="block h-full w-full" />
       </div>
     );
   },
