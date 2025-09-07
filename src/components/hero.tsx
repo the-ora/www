@@ -1,14 +1,11 @@
-import { Input } from "./ui/input";
-import { Button } from "./ui/button";
-import { DarkVeilBackground } from "./ui/dark-veil-background";
-import { ShinyButton } from "./ui/shiny-button";
 import { Star } from "lucide-react";
-import { Icons } from "./icons";
-import { ArrowRight } from "./animate-ui/icons/arrow-right";
-import Noise from "./noise";
-import { PRESENTATION } from "../data/presentation";
 import Link from "next/link";
+import { PRESENTATION } from "../data/presentation";
+import { ArrowRight } from "./animate-ui/icons/arrow-right";
 import HeroBackground from "./hero-background";
+import { Icons } from "./icons";
+import { ShinyButton } from "./ui/shiny-button";
+import { WaitlistForm } from "./waitlist-form";
 
 export function Hero() {
   return (
@@ -25,13 +22,7 @@ export function Hero() {
           </p>
         </div>
         <div className="flex flex-col gap-4">
-          <div className="flex space-x-4">
-            <Input
-              className="w-96 rounded-none bg-input"
-              placeholder="yonaries@0.email"
-            />
-            <Button className="rounded-none">Join waitlist</Button>
-          </div>
+          <WaitlistForm/>
           <div className="flex items-center gap-2">
             <div className="size-2 animate-pulse rounded-full bg-green-400 shadow-2xl shadow-green-400" />
             <p className="text-muted-foreground text-sm">
