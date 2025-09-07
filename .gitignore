@@ -36,7 +36,8 @@ pnpm-lock.yaml
 bun.lock
 
 # env files (can opt-in for committing if needed)
-.env*
+.env
+.env.local
 
 # vercel
 .vercel
