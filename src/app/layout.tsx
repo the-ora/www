@@ -17,20 +17,39 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Ora Browser",
   description: "Less noise, more browsing.",
-  icons: [
-    {
-      rel: "icon",
-      type: "image/svg+xml",
-      url: "/favicon.svg",
-      media: "(prefers-color-scheme: light)",
-    },
-    {
-      rel: "icon",
-      type: "image/svg+xml",
-      url: "/favicon-dark.svg",
-      media: "(prefers-color-scheme: dark)",
-    },
-  ],
+  icons: {
+    icon: [
+      {
+        media: "(prefers-color-scheme: light)",
+        url: "/icons/favicon.svg",
+        href: "/icons/favicon.svg",
+      },
+      {
+        media: "(prefers-color-scheme: dark)",
+        url: "/icons/favicon-dark.svg",
+        href: "/icons/favicon-dark.svg",
+      },
+    ],
+  },
+  openGraph: {
+    title: "Ora Browser",
+    description: "Less noise, more browsing.",
+    type: "website",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Ora Browser - Less noise, more browsing.",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ora Browser",
+    description: "Less noise, more browsing.",
+    images: ["/opengraph-image.png"],
+  },
 };
 
 export default function RootLayout({
