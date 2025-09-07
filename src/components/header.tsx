@@ -60,7 +60,7 @@ export function Header({ className }: HeaderProps) {
             <div className={cn("flex items-center gap-3 sm:gap-6")}>
               {SOCIALITEMS.map((item) => (
                 <a
-                  className="size-3.5 rounded-full duration-150 hover:opacity-80 sm:size-4"
+                  className="size-3.5 rounded-full opacity-80 duration-150 hover:opacity-100 sm:size-4"
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
