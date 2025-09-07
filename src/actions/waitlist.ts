@@ -1,15 +1,23 @@
 "use server";
 import { sendEmail } from "@/lib/resend";
 import { WaitlistEmail } from "@/components/emails/waitlist";
-import { redis } from "../lib/redis";
+import { ratelimit, redis } from "../lib/redis";
 import { render } from "@react-email/render";
 
-export async function addToWaitlist(email: string) {
+export async function addToWaitlist(email: string, ip: string) {
   if (!email) throw new Error("email is required");
+  
+  const { success } = await ratelimit.limit(ip);
+  if (!success) throw new Error('Too many requests, please try again later.');
 
   await redis.sadd("ora:waitlist", email);
 
   return { success: true };
+}
+
+export async function getWaitlistCount() {
+  const count = await redis.scard('ora:waitlist')
+  return count
 }
 
 export async function sendJoiningEmail(email: string) {
