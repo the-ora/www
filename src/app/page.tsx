@@ -1,6 +1,7 @@
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { Hero } from "@/components/hero";
+import { Features } from "@/components/features";
 import {
   createWebsiteSchema,
   createSoftwareApplicationSchema,
@@ -27,6 +28,7 @@ export default function Home() {
       />
       <Header />
       <Hero />
+      <Features />
       <Footer />
     </main>
   );
