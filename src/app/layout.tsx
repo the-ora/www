@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ora Browser - Open Source Browser for macOS",
+  title: "Ora Browser - The Open source Arc alternative for macOS",
   description:
     "Open source Arc alternative built on WebKit. Ora delivers a clean, native macOS experience with vertical tabs, ad blocking, and privacy-first browsing. MIT licensed and free forever.",
   keywords: [
