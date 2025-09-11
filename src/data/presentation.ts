@@ -11,7 +11,7 @@ export const PRESENTATION = {
   hero: {
     title: "Less noise, more browsing.",
     description:
-      "Built on webkit, designed for macOS. Ora delivers a clean, native experience that’s simple, powerful, and free of bloat.",
+      "Open source browser built on WebKit, designed for macOS. Ora delivers a clean, native experience that's simple, powerful, and free of bloat.",
   },
   urls: {
     github: "https://github.com/the-ora/browser",

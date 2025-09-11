@@ -17,9 +17,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ora Browser - Fast, Secure, and Minimal Browser for macOS",
+  title: "Ora Browser - The Open source Arc alternative for macOS",
   description:
-    "Arc alternative built on WebKit. Ora delivers a clean, native experience that's simple, powerful, and free of bloat.",
+    "Open source Arc alternative built on WebKit. Ora delivers a clean, native macOS experience with vertical tabs, ad blocking, and privacy-first browsing. MIT licensed and free forever.",
   keywords: [
     "Ora Browser",
     "macOS browser",
@@ -82,18 +82,15 @@ export const metadata: Metadata = {
   // },
   icons: {
     icon: [
-      {
-        media: "(prefers-color-scheme: light)",
-        url: "/icons/favicon.svg",
-        href: "/icons/favicon.svg",
-      },
-      {
-        media: "(prefers-color-scheme: dark)",
-        url: "/icons/favicon-dark.svg",
-        href: "/icons/favicon-dark.svg",
-      },
+      { url: "/favicon.png", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
   },
+  manifest: "/site.webmanifest",
   openGraph: {
     title: "Ora Browser - Fast, Secure, and Minimal Browser for macOS",
     description:
