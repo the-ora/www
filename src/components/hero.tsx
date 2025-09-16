@@ -43,7 +43,7 @@ export async function Hero() {
             </p>
           </div>
         </div>
-        <div className="w-[96rem] h-[36rem] overflow-hidden p-2 border rounded-t-2xl blur-in-2xl bg-white/10 justify-center">
+        <div className="hidden sm:block xl:w-7xl h-fit sm:h-[36rem] overflow-hidden p-2 border rounded-t-2xl blur-in-2xl bg-white/10 justify-center">
           <Image
             src="/browser-3.png"
             alt="Mockup"
