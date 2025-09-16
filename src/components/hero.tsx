@@ -12,20 +12,22 @@ import { formatNumber } from "@/lib/utils";
 import { Button } from "./ui/button";
 import { GithubStarButton } from "./github-starts-button";
 import { DownloadAlphaButton } from "./download-alpha-button";
+import Image from "next/image";
 
 export async function Hero() {
   const waitlistCount = await getWaitlistCount();
 
   return (
     <div className="h-screen overflow-clip">
-      <HeroBackground />
-      <main className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-8 px-4 sm:gap-12 md:gap-18">
-        <GithubStarButton />
+      <HeroBackground/>
+      <main className="absolute inset-0 z-10 flex flex-col items-center gap-8 px-4 sm:gap-12 md:gap-16">
+        <div className="h-24"/>
+        <GithubStarButton/>
         <div className="flex flex-col items-center gap-8">
-          <h1 className="z-10 w-full max-w-[42rem] text-center font-medium text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
+          <h1 className="z-10 w-full max-w-[42rem] text-center font-medium text-4xl md:text-5xl">
             {PRESENTATION.hero.title}
           </h1>
-          <p className="w-full max-w-xl text-center text-base sm:text-lg text-muted-foreground leading-6 px-4">
+          <p className="w-full max-w-xl text-center text-base text-muted-foreground leading-6 px-4">
             {PRESENTATION.hero.description}
           </p>
         </div>
@@ -40,10 +42,15 @@ export async function Hero() {
               people have joined the waitlist for beta
             </p>
           </div>
-          <span className="w-full text-center">or</span>
-          <div className="w-full flex justify-center">
-            <DownloadAlphaButton />
-          </div>
+        </div>
+        <div className="w-[96rem] h-[36rem] overflow-hidden p-2 border rounded-t-2xl blur-in-2xl bg-white/10 justify-center">
+          <Image
+            src="/browser-3.png"
+            alt="Mockup"
+            width={1536}
+            height={973}
+            // className="w-full h-full"
+          />
         </div>
       </main>
     </div>

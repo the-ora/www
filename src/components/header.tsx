@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { Logo } from "./logo";
 import { Button } from "./ui/button";
+import { DownloadAlphaButton } from "./download-alpha-button";
 
 interface NavigationItem {
   name: string;
@@ -25,7 +26,7 @@ export function Header({ className }: HeaderProps) {
       <nav className="fixed z-20 mt-2 w-full px-4 sm:mt-4">
         <div
           className={cn(
-            "mx-auto flex w-full max-w-3xl items-center justify-between gap-4 rounded-none border bg-background/10 px-3 py-3 backdrop-blur-md sm:gap-6 sm:px-4 sm:py-4",
+            "mx-auto flex w-full max-w-4xl items-center justify-between gap-4 rounded-none border bg-background/10 px-3 py-3 backdrop-blur-md sm:gap-6 sm:px-4 sm:py-4",
             className,
           )}
         >
@@ -57,7 +58,7 @@ export function Header({ className }: HeaderProps) {
           </ul>*/}
 
           <div className="flex items-center gap-6 sm:gap-12">
-            <div className={cn("flex items-center gap-3 sm:gap-6")}>
+            {/*<div className={cn("flex items-center gap-3 sm:gap-6")}>
               {SOCIALITEMS.map((item) => (
                 <a
                   className="size-3.5 rounded-full opacity-80 duration-150 hover:opacity-100 sm:size-4"
@@ -70,8 +71,9 @@ export function Header({ className }: HeaderProps) {
                   <span className="sr-only">{item.label}</span>
                 </a>
               ))}
-            </div>
+            </div>*/}
             {/*<Button className="rounded-none">Download</Button>*/}
+            <DownloadAlphaButton />
           </div>
         </div>
       </nav>

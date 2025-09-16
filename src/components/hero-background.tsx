@@ -2,10 +2,15 @@
 
 import { DarkVeilBackground } from "./ui/dark-veil-background";
 import Noise from "./noise";
+import { cn } from "@/lib/utils";
 
-export default function HeroBackground() {
+export default function HeroBackground({
+  className = "",
+}: {
+  className?: string;
+}) {
   return (
-    <div className="relative h-full w-full overflow-hidden">
+    <div className={cn("relative h-full w-full overflow-hidden", className)}>
       <DarkVeilBackground
         hueShift={220}
         scanlineIntensity={0.4}
