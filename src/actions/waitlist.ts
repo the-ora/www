@@ -17,7 +17,13 @@ export async function addToWaitlist(email: string, ip: string) {
 }
 
 export async function getWaitlistCount() {
-  const count = await redis.scard("ora:waitlist");
+  // const count = await redis.scard("ora:waitlist");
+  let count: number;
+  try {
+    count = await redis.scard("ora:waitlist");
+  } catch {
+    count = 69
+  }
   return count;
 }
 
