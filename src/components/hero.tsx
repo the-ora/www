@@ -44,7 +44,9 @@ export async function Hero() {
       <HeroBackground />
       <main className="absolute inset-0 z-10 flex flex-col items-center gap-8 px-4 sm:gap-12 md:gap-16">
         <div className="h-24" />
-        <GithubStarsButton />
+        <AnimatedGroup variants={transitionVariants}>
+          <GithubStarsButton />
+        </AnimatedGroup>
         <AnimatedGroup variants={transitionVariants} className="flex flex-col items-center gap-8">
           <h1 className="z-10 w-full max-w-[42rem] text-center font-medium text-4xl md:text-5xl">
             {PRESENTATION.hero.title}
