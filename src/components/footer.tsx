@@ -2,6 +2,7 @@ import { PRESENTATION, SOCIALITEMS } from "@/data/presentation";
 import { Logo } from "./logo";
 import { BuyMeACoffeeBadge } from "./buymecoffe-badge";
 import { Button } from "./ui/button";
+import { ContributorsList } from "./contributors-list";
 
 export function Footer() {
   return (
@@ -29,8 +30,11 @@ export function Footer() {
               ))}
             </div>
           </div>
-          <div className="self-center py-2 px-3 bg-primary h-fit border hover:bg-primary/96 sm:self-start transition-transform duration-150 will-change-transform hover:scale-[1.02] active:scale-95">
-            <BuyMeACoffeeBadge className="size-20 sm:size-24" />
+          <div className="flex flex-col gap-4 ">
+            <div className="ml-auto self-center py-2 px-3 bg-primary h-fit border hover:bg-primary/96 sm:self-start transition-transform duration-150 will-change-transform hover:scale-[1.02] active:scale-95">
+              <BuyMeACoffeeBadge className="size-20 sm:size-24" />
+            </div>
+            <ContributorsList />
           </div>
         </div>
         <div className="border-t">

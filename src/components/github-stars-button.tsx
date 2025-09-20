@@ -7,7 +7,7 @@ import { Star } from "lucide-react";
 import { ArrowRight } from "./animate-ui/icons/arrow-right";
 import { formatNumber } from "@/lib/utils";
 
-export async function GithubStarButton() {
+export async function GithubStarsButton() {
   const stars = await getRepoStars("the-ora", "browser");
   return (
     <Link href={PRESENTATION.urls.github} target="_blank">
