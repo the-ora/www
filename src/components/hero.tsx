@@ -13,7 +13,6 @@ import { Button } from "./ui/button";
 import { GithubStarsButton } from "./github-stars-button";
 import { DownloadAlphaButton } from "./download-alpha-button";
 import Image from "next/image";
-import { ContributorsList } from "./contributors-list";
 import { AnimatedGroup } from "./ui/animated-group";
 
 const transitionVariants = {
