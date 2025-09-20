@@ -5,7 +5,7 @@ export async function ContributorsList() {
   const contributors = await getRepoContributors("the-ora", "browser");
 
   // Transform contributors to match AvatarGroup format
-  const avatarItems = contributors.map((contributor, index) => ({
+  const avatarItems = contributors.map((contributor: any, index: number) => ({
     id: index + 1,
     name: contributor.name,
     designation: `${contributor.contributions} contributions`,
