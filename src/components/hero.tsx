@@ -83,7 +83,7 @@ export async function Hero() {
           </div>
         </AnimatedGroup>
         {/* <ContributorsList /> */}
-        <div className="hidden sm:block xl:w-7xl h-fit sm:h-[36rem] overflow-hidden p-2 border rounded-t-2xl blur-in-2xl bg-white/10 justify-center">
+        <div className="hidden sm:block xl:w-7xl h-fit sm:h-[36rem] overflow-hidden p-2 border rounded-t-2xl blur-in-2xl bg-white/10 justify-center backdrop-blur-md">
           <Image
             src="/browser-3.png"
             alt="Mockup"
