@@ -17,6 +17,32 @@ export async function getRepoStars(owner: string, repo: string) {
   return data.stargazers_count as number;
 }
 
+export async function getRepoContributors(owner: string, repo: string) {
+  const res = await fetch(
+    `https://api.github.com/repos/${owner}/${repo}/contributors`,
+    {
+      headers: {
+        Accept: "application/vnd.github.v3+json",
+        "User-Agent": "ora-app",
+      },
+      next: { revalidate: 300 }, // cache for 5 minutes
+    },
+  );
+
+  if (!res.ok) {
+    throw new Error(`failed to fetch contributors: ${res.status}`);
+  }
+
+  const data = await res.json();
+
+  return data.map((contributor: any) => ({
+    name: contributor.login,
+    avatarUrl: contributor.avatar_url,
+    contributions: contributor.contributions,
+    profileUrl: contributor.html_url,
+  }));
+}
+
 export async function getLatestReleaseDmgUrl(owner: string, repo: string) {
   const res = await fetch(
     `https://api.github.com/repos/${owner}/${repo}/releases/latest`,

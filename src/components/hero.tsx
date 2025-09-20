@@ -10,19 +10,20 @@ import { getWaitlistCount } from "@/actions/waitlist";
 import { getRepoStars } from "@/actions/github";
 import { formatNumber } from "@/lib/utils";
 import { Button } from "./ui/button";
-import { GithubStarButton } from "./github-starts-button";
+import { GithubStarsButton } from "./github-stars-button";
 import { DownloadAlphaButton } from "./download-alpha-button";
 import Image from "next/image";
+import { ContributorsList } from "./contributors-list";
 
 export async function Hero() {
   const waitlistCount = await getWaitlistCount();
 
   return (
     <div className="h-screen overflow-clip">
-      <HeroBackground/>
+      <HeroBackground />
       <main className="absolute inset-0 z-10 flex flex-col items-center gap-8 px-4 sm:gap-12 md:gap-16">
-        <div className="h-24"/>
-        <GithubStarButton/>
+        <div className="h-24" />
+        <GithubStarsButton />
         <div className="flex flex-col items-center gap-8">
           <h1 className="z-10 w-full max-w-[42rem] text-center font-medium text-4xl md:text-5xl">
             {PRESENTATION.hero.title}
@@ -43,13 +44,14 @@ export async function Hero() {
             </p>
           </div>
         </div>
+        <ContributorsList />
         <div className="hidden sm:block xl:w-7xl h-fit sm:h-[36rem] overflow-hidden p-2 border rounded-t-2xl blur-in-2xl bg-white/10 justify-center">
           <Image
             src="/browser-3.png"
             alt="Mockup"
             width={1536}
             height={973}
-            // className="w-full h-full"
+          // className="w-full h-full"
           />
         </div>
       </main>
