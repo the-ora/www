@@ -50,7 +50,7 @@ export function WaitlistForm() {
 
       const validation = emailSchema.safeParse({ email: trimmedEmail });
       if (!validation.success) {
-        toast.error(validation.error.message);
+        toast.error(validation.error.issues[0].message);
         return;
       }
 
@@ -88,14 +88,14 @@ export function WaitlistForm() {
         }
       }
     },
-    [email, formState, fetchUserIP],
+    [email, formState, fetchUserIP]
   );
 
   const handleEmailChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
       setEmail(e.target.value);
     },
-    [],
+    []
   );
 
   const isSubmitting = formState === "submitting";
