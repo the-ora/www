@@ -22,7 +22,7 @@ export async function getWaitlistCount() {
   try {
     count = await redis.scard("ora:waitlist");
   } catch {
-    count = 69
+    count = 69;
   }
   return count;
 }

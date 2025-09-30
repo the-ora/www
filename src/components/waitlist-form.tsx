@@ -88,14 +88,14 @@ export function WaitlistForm() {
         }
       }
     },
-    [email, formState, fetchUserIP]
+    [email, formState, fetchUserIP],
   );
 
   const handleEmailChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
       setEmail(e.target.value);
     },
-    []
+    [],
   );
 
   const isSubmitting = formState === "submitting";

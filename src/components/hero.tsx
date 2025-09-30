@@ -19,10 +19,10 @@ export async function Hero() {
 
   return (
     <div className="h-screen overflow-clip">
-      <HeroBackground/>
+      <HeroBackground />
       <main className="absolute inset-0 z-10 flex flex-col items-center gap-8 px-4 sm:gap-12 md:gap-16">
-        <div className="h-24"/>
-        <GithubStarButton/>
+        <div className="h-24" />
+        <GithubStarButton />
         <div className="flex flex-col items-center gap-8">
           <h1 className="z-10 w-full max-w-[42rem] text-center font-medium text-4xl md:text-5xl">
             {PRESENTATION.hero.title}
