@@ -29,9 +29,14 @@ export function Footer() {
               ))}
             </div>
           </div>
-          <div className="self-center py-2 px-3 bg-primary h-fit border hover:bg-primary/96 sm:self-start transition-transform duration-150 will-change-transform hover:scale-[1.02] active:scale-95">
+          {/*<div className="self-center py-2 px-3 bg-primary h-fit border hover:bg-primary/96 sm:self-start transition-transform duration-150 will-change-transform hover:scale-[1.02] active:scale-95">
             <BuyMeACoffeeBadge className="size-20 sm:size-24" />
-          </div>
+          </div>*/}
+          <iframe
+            src="https://github.com/sponsors/the-ora/button"
+            title="Sponsor the-ora"
+            className="h-8 bg-transparent w-28 border-none rounded-sm"
+          />
         </div>
         <div className="border-t">
           <p className="py-4 text-center text-neutral-600 text-sm sm:text-left">
