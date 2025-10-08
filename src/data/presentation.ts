@@ -16,7 +16,7 @@ export const PRESENTATION = {
   urls: {
     github: "https://github.com/the-ora/browser",
     x: "https://x.com/orabrowser",
-    discord: "https://discord.gg/aYFUFyxx",
+    discord: "https://discord.gg/9aZWH52Zjm",
     buymecoffee: "https://buymeacoffee.com/orabrowser",
     website: "https://orabrowser.com",
   },
