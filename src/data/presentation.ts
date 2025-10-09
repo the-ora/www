@@ -11,7 +11,7 @@ export const PRESENTATION = {
   hero: {
     title: "Less noise, more browsing.",
     description:
-      "Open source browser built on WebKit, designed for macOS. Ora delivers a clean, native experience that's simple, powerful, and free of bloat.",
+      "Ora is an open-source macOS browser built with Swift and WebKit. Fast, secure, and native Arc alternative that puts users first with smooth tab management, spaces, vertical sidebar, and many more.",
   },
   urls: {
     github: "https://github.com/the-ora/browser",
@@ -22,7 +22,7 @@ export const PRESENTATION = {
   },
   footer: {
     description:
-      "Ora is a browser that is built on webkit, designed for macOS. It delivers a clean, native experience that’s simple, powerful, and free of bloat.",
+      "Ora is an open-source macOS browser built with Swift and WebKit. Fast, secure, native and free of bloat Arc alternative that puts users first.",
   },
 } as const;
 
