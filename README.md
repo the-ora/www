@@ -15,14 +15,14 @@ Website for the Ora Browser, built with Next.js App Router, Tailwind v4, and Tur
 
 ```bash
 # install deps
-npm install
+pnpm install
 
 # run dev server (Turbopack)
-npm run dev
+pnpm dev
 
 # typecheck/lint/format
-npm run lint
-npm run format
+pnpm lint
+pnpm format
 ```
 
 Visit `http://localhost:3000`.
@@ -41,11 +41,11 @@ Notes:
 ## Scripts
 
 ```bash
-npm run dev     # next dev --turbopack
-npm run build   # next build --turbopack
-npm run start   # next start
-npm run lint    # biome check
-npm run format  # biome format --write
+pnpm dev     # next dev --turbopack
+pnpm build   # next build --turbopack
+pnpm start   # next start
+pnpm lint    # biome check
+pnpm format  # biome format --write
 ```
 
 ## Project structure
@@ -73,8 +73,4 @@ src/
 ## Contributing
 - Keep PRs small and focused.
 - Follow the existing patterns and avoid introducing duplicate logic.
-- Run `npm run lint` and `npm run format` before committing.
-
-## License
-Ora is open source and licensed under the MIT License.
-Feel free to use, modify, and distribute it under the terms of the MIT License.
+- Run `pnpm lint` and `pnpm format` before committing.
